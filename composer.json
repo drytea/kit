@@ -35,6 +35,7 @@
         ],
         "post-install-cmd": [
             "php artisan key:generate",
+            "php artisan config:publish cartalyst/sentry",
             "php artisan asset:publish \"vendor/twbs/bootstrap/dist/css\" ../assets/css",
             "php artisan asset:publish \"vendor/twbs/bootstrap/dist/js\" ../assets/js",
             "php artisan asset:publish \"vendor/twbs/bootstrap/dist/fonts\" ../assets/fonts"
