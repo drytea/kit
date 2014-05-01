@@ -25,9 +25,20 @@
         "twbs/bootstrap": "3.1.*"
     },
     "scripts": {
-        "pre-update-cmd": ["php artisan clear-compiled", "php artisan optimize"],
-        "post-update-cmd": ["php artisan clear-compiled", "php artisan optimize"],
-        "post-install-cmd": ["php artisan key:generate"]
+        "pre-update-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-install-cmd": [
+            "php artisan key:generate",
+            "php artisan asset:publish \"vendor/twbs/bootstrap/dist/css\" assets/css",
+            "php artisan asset:publish \"vendor/twbs/bootstrap/dist/js\" assets/js",
+            "php artisan asset:publish \"vendor/twbs/bootstrap/dist/fonts\" assets/fonts"
+        ]
     },
     "config": {
         "prefered-install": "dist"
