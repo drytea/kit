@@ -13,7 +13,7 @@
             "name": "Taylor Otwell",
             "email": "taylorotwell@gmail.com",
             "role": "Creator of Laravel"
-        },
+        }
     ],
     "autoload": {
         "classmap": [
