@@ -93,7 +93,7 @@ return array(
 
 	'providers' => array(
 
-		'Cartalyst\Sentry\SentryServiceProvider'
+		'Cartalyst\Sentry\SentryServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
