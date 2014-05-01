@@ -7,12 +7,12 @@
         {
             "name": "Ogün Karakuş",
             "email": "ogunkarakus@superposta.com",
-			"Project Maintainer"
+            "Project Maintainer"
         },
         {
             "name": "Taylor Otwell",
             "email": "taylorotwell@gmail.com",
-			"role": "Creator of Laravel"
+            "role": "Creator of Laravel"
         },
     ],
     "autoload": {
