@@ -16,15 +16,9 @@
         "twbs/bootstrap": "3.*"
     },
     "scripts": {
-        "pre-update-cmd": [
-            "php artisan clear-compiled"
-        ],
-        "post-update-cmd": [
-            "php artisan optimize"
-        ],
-        "post-install-cmd": [
-            "php artisan optimize"
-        ]
+        "pre-update-cmd": [],
+        "post-update-cmd": [],
+        "post-install-cmd": []
     },
     "config": {
         "prefered-install": "dist"
