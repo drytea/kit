@@ -10,7 +10,23 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "cartalyst/sentry": "2.*",
+        "laravel/framework": "4.*",
+        "twbs/bootstrap": "3.*"
     },
-    "minimum-stability": "dev"
+    "scripts": {
+        "pre-update-cmd": [
+            "php artisan clear-compiled"
+        ],
+        "post-update-cmd": [
+            "php artisan optimize"
+        ],
+        "post-install-cmd": [
+            "php artisan optimize"
+        ]
+    },
+    "config": {
+        "prefered-install": "dist"
+    }
 }
