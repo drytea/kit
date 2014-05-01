@@ -1,0 +1,16 @@
+{
+	"name": "msntx/kit",
+	"description": "A sample application for beginning development with Laravel 4.",
+	"keywords": ["beginner", "framework", "kit", "laravel", "laravel 4", "starter"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ogün Karakuş",
+			"email": "ogunkarakus@superposta.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"minimum-stability": "dev"
+}
