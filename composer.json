@@ -28,12 +28,16 @@
     "require": {
         "cartalyst/sentry": "2.1.*",
         "laravel/framework": "4.1.*",
-        "twbs/bootstrap": "3.1.*"
+        "laravelbook/ardent": "2.4.*",
+        "twbs/bootstrap": "3.1.*",
+        "zizaco/confide": "3.2.*",
+        "zizaco/entrust": "1.2.*"
     },
     "require-dev": {
         "mockery/mockery": "dev-master",
         "orchestra/testbench": "2.1.*",
-        "satooshi/php-coveralls": "0.6.*"
+        "satooshi/php-coveralls": "0.6.*",
+        "way/generators": "2.*"
     },
     "scripts": {
         "pre-update-cmd": [
@@ -47,6 +51,8 @@
         "post-install-cmd": [
             "php artisan key:generate",
             "php artisan config:publish cartalyst/sentry",
+            "php artisan confide:migration",
+            "php artisan entrust:migration",
             "php artisan asset:publish --path=\"vendor/twbs/bootstrap/dist/css\" ../assets/css",
             "php artisan asset:publish --path=\"vendor/twbs/bootstrap/dist/js\" ../assets/js",
             "php artisan asset:publish --path=\"vendor/twbs/bootstrap/dist/fonts\" ../assets/fonts"
