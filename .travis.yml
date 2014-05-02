@@ -7,12 +7,14 @@ php:
   - hhvm
 
 before_script:
-  - travis_retry composer self-update
-  - travis_retry composer install --no-interaction --prefer-source --dev
+  - composer self-update
+  - composer install --no-interaction --prefer-source --dev
 
-script: phpunit --coverage-text --coverage-clover ./build/logs/clover.xml
+script:
+  - mkdir mkdir -p ./build/logs
+  - phpunit --coverage-text --coverage-clover ./build/logs/clover.xml
 
-after_script: php vendor/bin/coveralls
+after_script: php vendor/bin/coveralls -v
 
 matrix:
   allow_failures:
