@@ -93,7 +93,6 @@ return array(
 
 	'providers' => array(
 
-		'Cartalyst\Sentry\SentryServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -120,6 +119,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		# Included packages service providers
+		'Cartalyst\Sentry\SentryServiceProvider',
 		'Zizaco\Confide\ConfideServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
 
@@ -157,14 +158,12 @@ return array(
 		'Blade'           => 'Illuminate\Support\Facades\Blade',
 		'Cache'           => 'Illuminate\Support\Facades\Cache',
 		'ClassLoader'     => 'Illuminate\Support\ClassLoader',
-		'Confide'         => 'Zizaco\Confide\ConfideFacade',
 		'Config'          => 'Illuminate\Support\Facades\Config',
 		'Controller'      => 'Illuminate\Routing\Controller',
 		'Cookie'          => 'Illuminate\Support\Facades\Cookie',
 		'Crypt'           => 'Illuminate\Support\Facades\Crypt',
 		'DB'              => 'Illuminate\Support\Facades\DB',
 		'Eloquent'        => 'Illuminate\Database\Eloquent\Model',
-		'Entrust'         => 'Zizaco\Entrust\EntrustFacade',
 		'Event'           => 'Illuminate\Support\Facades\Event',
 		'File'            => 'Illuminate\Support\Facades\File',
 		'Form'            => 'Illuminate\Support\Facades\Form',
@@ -184,13 +183,16 @@ return array(
 		'Route'           => 'Illuminate\Support\Facades\Route',
 		'Schema'          => 'Illuminate\Support\Facades\Schema',
 		'Seeder'          => 'Illuminate\Database\Seeder',
-		'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 		'Session'         => 'Illuminate\Support\Facades\Session',
 		'SSH'             => 'Illuminate\Support\Facades\SSH',
 		'Str'             => 'Illuminate\Support\Str',
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		# Included packages aliases
+		'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Confide'         => 'Zizaco\Confide\ConfideFacade',
+		'Entrust'         => 'Zizaco\Entrust\EntrustFacade',
 
 	),
 
