@@ -28,6 +28,7 @@
     "require": {
         "cartalyst/sentry": "2.1.*",
         "laravel/framework": "4.1.*",
+        "laravelbook/ardent": "dev-master",
         "twbs/bootstrap": "3.1.*",
         "zizaco/confide": "3.2.*",
         "zizaco/entrust": "1.2.*"
