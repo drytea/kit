@@ -13,19 +13,19 @@ return array(
 	|
 	*/
 
-	"accepted"             => "The :attribute must be accepted.",
-	"active_url"           => "The :attribute is not a valid URL.",
-	"after"                => "The :attribute must be a date after :date.",
-	"alpha"                => "The :attribute may only contain letters.",
-	"alpha_dash"           => "The :attribute may only contain letters, numbers, and dashes.",
-	"alpha_num"            => "The :attribute may only contain letters and numbers.",
-	"array"                => "The :attribute must be an array.",
+	"accepted"             => ":attribute kabul edilebilir olmalıdır.",
+	"active_url"           => ":attribute geçerli bir URL olmalıdır.",
+	"after"                => ":attribute belirtilen tarihden daha eski olmalıdır. (:date)",
+	"alpha"                => ":attribute sadece harflerden oluşmalıdır.",
+	"alpha_dash"           => ":attribute sadece harfler, rakamlar ve tirelerden oluşmalıdır.",
+	"alpha_num"            => ":attribute sadece harfler ve rakamlardan oluşmalıdır.",
+	"array"                => ":attribute dizi olmalıdır.",
 	"before"               => "The :attribute must be a date before :date.",
 	"between"              => array(
-		"numeric" => "The :attribute must be between :min and :max.",
-		"file"    => "The :attribute must be between :min and :max kilobytes.",
-		"string"  => "The :attribute must be between :min and :max characters.",
-		"array"   => "The :attribute must have between :min and :max items.",
+		"numeric" => ":attribute :min ve :max arasında olmalıdır.",
+		"file"    => ":attribute :min ve :max arasındaki kilobayt değeri olmalıdır.",
+		"string"  => ":attribute :min ve :max arasındaki karakterden oluşmalıdır.",
+		"array"   => ":attribute :min ve :max arasındaki nesneye sahip olmalıdır.",
 	),
 	"confirmed"            => "The :attribute confirmation does not match.",
 	"date"                 => "The :attribute is not a valid date.",
@@ -35,10 +35,10 @@ return array(
 	"digits_between"       => "The :attribute must be between :min and :max digits.",
 	"email"                => "The :attribute must be a valid email address.",
 	"exists"               => "The selected :attribute is invalid.",
-	"image"                => "The :attribute must be an image.",
+	"image"                => ":attribute alanı resim dosyası olmalıdır.",
 	"in"                   => "The selected :attribute is invalid.",
 	"integer"              => "The :attribute must be an integer.",
-	"ip"                   => "The :attribute must be a valid IP address.",
+	"ip"                   => ":attribute geçerli bir IP adresi olmalıdır.",
 	"max"                  => array(
 		"numeric" => "The :attribute may not be greater than :max.",
 		"file"    => "The :attribute may not be greater than :max kilobytes.",
@@ -61,15 +61,15 @@ return array(
 	"required_with_all"    => "The :attribute field is required when :values is present.",
 	"required_without"     => "The :attribute field is required when :values is not present.",
 	"required_without_all" => "The :attribute field is required when none of :values are present.",
-	"same"                 => "The :attribute and :other must match.",
+	"same"                 => ":attribute ile :other eşleşmelidir.",
 	"size"                 => array(
 		"numeric" => "The :attribute must be :size.",
 		"file"    => "The :attribute must be :size kilobytes.",
 		"string"  => "The :attribute must be :size characters.",
 		"array"   => "The :attribute must contain :size items.",
 	),
-	"unique"               => "The :attribute has already been taken.",
-	"url"                  => "The :attribute format is invalid.",
+	"unique"               => ":attribute daha önceden kayıt edilmiş.",
+	"url"                  => ":attribute biçimi geçersiz.",
 
 	/*
 	|--------------------------------------------------------------------------
