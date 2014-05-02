@@ -6,13 +6,8 @@
     "authors": [
         {
             "name": "Ogün Karakuş",
-            "email": "ogunkarakus@superposta.com",
+            "email": "msntx@mail.com",
             "role": "Project Maintainer"
-        },
-        {
-            "name": "Taylor Otwell",
-            "email": "taylorotwell@gmail.com",
-            "role": "Creator of Laravel"
         }
     ],
     "autoload": {
