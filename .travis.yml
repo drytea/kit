@@ -11,8 +11,8 @@ before_script:
   - composer install --no-interaction --prefer-source --dev
 
 script:
-  - mkdir mkdir -p ./build/logs
-  - phpunit --coverage-text --coverage-clover ./build/logs/clover.xml
+  - mkdir mkdir -p build/logs
+  - php vendor/bin/phpunit -c phpunit.xml
 
 after_script: php vendor/bin/coveralls -v
 
