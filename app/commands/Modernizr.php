@@ -20,7 +20,7 @@ class Modernizr extends Command {
 	 *
 	 * @var string
 	 */
-	protected $description = 'Publish a Modernizr (cdnjs version) package assets to the assets directory.';
+	protected $description = 'Publish a Modernizr (cdnjs version) package assets to the public directory.';
 
 	/**
 	 * Create a new command instance.
