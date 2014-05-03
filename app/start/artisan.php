@@ -12,3 +12,5 @@
 */
 
 Artisan::add(new Bootstrap);
+
+Artisan::add(new Modernizr);
