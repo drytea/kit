@@ -39,14 +39,16 @@
         "post-install-cmd": [
             "php artisan clear-compiled",
             "php artisan optimize",
-            "php artisan kit:bootstrap",
+            "php artisan kit:bootstrap"
             "php artisan kit:jquery",
             "php artisan kit:modernizr"
         ],
         "post-update-cmd": [
             "php artisan clear-compiled",
             "php artisan optimize",
-            "php artisan modernizr:publish"
+            "php artisan kit:bootstrap",
+            "php artisan kit:jquery",
+            "php artisan kit:modernizr"
         ]
     },
     "config": {

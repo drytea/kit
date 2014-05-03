@@ -38,43 +38,49 @@ class Bootstrap extends Command {
 	 */
 	public function fire()
 	{
-		if ( File::isDirectory('public/assets') )
+		if ( $this->isInstalled() )
 		{
-			File::deleteDirectory('public/assets');
+			$message = 'Twitter Bootstrap updated and published.';
 		}
-		
+		else
+		{
+			$message = 'Twitter Bootstrap installed and published.';
+		}
+
 		$base_vendor_directory = 'vendor/twbs/bootstrap/dist/';
 		$base_package_directory = '../assets/';
-		
+
 		$vendor_directories = array(
 			'css' => $base_vendor_directory.'css',
 			'fonts' => $base_vendor_directory.'fonts',
 			'js' => $base_vendor_directory.'js',
 		);
-		
+
 		$package_directories = array(
 			'css' => $base_package_directory.'css',
 			'fonts' => $base_package_directory.'fonts',
 			'js' => $base_package_directory.'js',
 		);
-		
-		$this->call('asset:publish', array(
+
+		$this->callSilent('asset:publish', array(
 					'package' => $package_directories['css'],
 					'--path'  => $vendor_directories['css']
 				)
 		);
-		
-		$this->call('asset:publish', array(
+
+		$this->callSilent('asset:publish', array(
 					'package' => $package_directories['fonts'],
 					'--path'  => $vendor_directories['fonts']
 				)
 		);
-		
-		$this->call('asset:publish', array(
+
+		$this->callSilent('asset:publish', array(
 					'package' => $package_directories['js'],
 					'--path'  => $vendor_directories['js']
 				)
 		);
+
+		$this->info($message);
 	}
 
 	/**
@@ -97,4 +103,13 @@ class Bootstrap extends Command {
 		return array();
 	}
 
+	/**
+	 * Twitter Bootstrap is installed?
+	 *
+	 * @return boolean
+	 */
+	protected function isInstalled()
+	{
+		return File::exists('public/assets/css/bootstrap.min.css') ? true : false;
+	}
 }

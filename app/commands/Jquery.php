@@ -43,7 +43,7 @@ class Jquery extends Command {
 
 		$response = $request[0]->getContent();
 
-		$file = 'public/assets/js/jquery.min.js';
+		$file = 'public/assets/jquery.min.js';
 
 		if ( File::exists($file) )
 		{
@@ -51,7 +51,7 @@ class Jquery extends Command {
 
 			if ( md5($content) != md5($response) )
 			{
-				File::put($file, $response);
+				File::put($file, $content);
 				
 				$this->info('jQuery updated and published.');
 			}
@@ -62,12 +62,16 @@ class Jquery extends Command {
 		}
 		else
 		{
-			if ( ! File::isDirectory('public/assets/js') )
+			if ( ! File::isDirectory('public/assets') )
+			{
+				$this->call('bootstrap:publish');
+			}
+			else
 			{
 				File::makeDirectory('public/assets/js', 0755, true);
 			}
 
-			File::put($file, $response);
+			File::put($file, $content);
 
 			$this->info('jQuery installed and published.');
 		}
