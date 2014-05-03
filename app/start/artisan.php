@@ -13,4 +13,6 @@
 
 Artisan::add(new Bootstrap);
 
+Artisan::add(new Jquery);
+
 Artisan::add(new Modernizr);
