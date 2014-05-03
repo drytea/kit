@@ -73,7 +73,7 @@ class Modernizr extends Command {
 		}
 		else
 		{
-			if ( ! File::isDirectory('public/assets') || ! File::isDirectory('public/assets/js') )
+			if ( ! File::isDirectory('public/assets') )
 			{
 				$this->call('bootstrap:publish');
 			}
