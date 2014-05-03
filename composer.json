@@ -37,15 +37,12 @@
     "scripts": {
         "post-create-project-cmd": [
             "php artisan clear-compiled",
-            "php artisan optimize",
-            "php artisan key:generate"
+            "php artisan optimize"
         ],
         "post-install-cmd": [
             "php artisan clear-compiled",
             "php artisan optimize",
-            "php artisan config:publish cartalyst/sentry",
-            "php artisan confide:migration",
-            "php artisan entrust:migration",
+            "php artisan key:generate",
             "php artisan asset:publish --path=\"vendor/twbs/bootstrap/dist/css\" ../assets/css",
             "php artisan asset:publish --path=\"vendor/twbs/bootstrap/dist/js\" ../assets/js",
             "php artisan asset:publish --path=\"vendor/twbs/bootstrap/dist/fonts\" ../assets/fonts"
