@@ -6,3 +6,9 @@ kit
 [![Total Downloads](https://img.shields.io/packagist/dm/msntx/kit.svg)](https://packagist.org/packages/msntx/kit)
 
 A sample application for beginning development with Laravel 4.
+
+### TODO
+  - CP (Control Panel)
+  - Coveralls integration
+  - Authentication system (Register, Login, Logout) [Sentry 2]
+  - Refactor language files
