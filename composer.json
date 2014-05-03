@@ -27,7 +27,7 @@
     },
     "require-dev": {
         "mockery/mockery": "0.9.*@dev",
-        "orchestra/testbench": "2.2.*@dev",
+        "orchestra/testbench": "2.1.*@dev",
         "satooshi/php-coveralls": "0.7.*@dev",
         "way/generators": "2.*"
     },
