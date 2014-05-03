@@ -43,9 +43,38 @@ class Bootstrap extends Command {
 			File::deleteDirectory(dirname('public/assets'));
 		}
 		
-		$this->call('asset:publish', array('package' => '../assets/css', '--path' => 'vendor/twbs/bootstrap/dist/css'));
-		$this->call('asset:publish', array('package' => '../assets/fonts', '--path' => 'vendor/twbs/bootstrap/dist/fonts'));
-		$this->call('asset:publish', array('package' => '../assets/js', '--path' => 'vendor/twbs/bootstrap/dist/js'));
+		$base_vendor_directory = 'vendor/twbs/bootstrap/dist/';
+		$base_package_directory = '../assets/';
+		
+		$vendor_directories = array(
+			'css' => $base_vendor_directory.'css',
+			'fonts' => $base_vendor_directory.'fonts',
+			'js' => $base_vendor_directory.'js',
+		);
+		
+		$package_directories = array(
+			'css' => $base_package_directory.'css',
+			'fonts' => $base_package_directory.'fonts',
+			'js' => $base_package_directory.'js',
+		);
+		
+		$this->call('asset:publish', array(
+					'package' => $package_directories['css'],
+					'--path'  => $vendor_directories['css']
+				)
+		);
+		
+		$this->call('asset:publish', array(
+					'package' => $package_directories['fonts'],
+					'--path'  => $vendor_directories['fonts']
+				)
+		);
+		
+		$this->call('asset:publish', array(
+					'package' => $package_directories['js'],
+					'--path'  => $vendor_directories['js']
+				)
+		);
 	}
 
 	/**
