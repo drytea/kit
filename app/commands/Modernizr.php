@@ -56,7 +56,7 @@ class Modernizr extends Command {
 
 		$file = 'public/assets/modernizr.min.js';
 
-		if ( File::exist($file) )
+		if ( File::exists($file) )
 		{
 			$content = File::get($file);
 
