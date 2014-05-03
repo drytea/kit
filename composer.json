@@ -35,7 +35,7 @@
         "way/generators": "2.*"
     },
     "scripts": {
-        "pre-create-project-cmd": [
+        "post-create-project-cmd": [
             "php artisan clear-compiled",
             "php artisan optimize",
             "php artisan key:generate"
