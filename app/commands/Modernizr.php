@@ -40,32 +40,26 @@ class Modernizr extends Command {
 	public function fire()
 	{
 		$request = Curl::get('http://cdnjs.com/');
-		
+
 		$response = $request[0]->getContent();
-		
-		unset($request);
-		
+
 		$modernizr = preg_match(
 			'#\<tr(.*?)id\=\"modernizr\"(.*?)\>(.*?)'.
 			'\<p\sitemprop\=\"downloadUrl\"(.*?)\>(.*?)\<\/p\>#si',
 			$response,
 			$matches
 		) ? 'http://' . trim(trim(end($matches)), '/') : null;
-		
-		unset($response);
-		
+
 		$request = Curl::get($modernizr);
-		
+
 		$response = $request[0]->getContent();
-		
-		unset($request);
-		
+
 		$file = 'public/assets/modernizr.min.js';
-		
+
 		if ( File::exist($file) )
 		{
 			$content = File::get($file);
-			
+
 			if ( md5($content) != md5($response) )
 			{
 				File::put($file, $content);
@@ -83,9 +77,9 @@ class Modernizr extends Command {
 			{
 				$this->call('bootstrap:publish');
 			}
-			
+
 			File::put($file, $content);
-			
+
 			$this->info('Modernizr installed and published.');
 		}
 	}
