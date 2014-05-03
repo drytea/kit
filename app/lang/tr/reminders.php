@@ -17,8 +17,8 @@ return array(
 
 	"user" => "Bu e-posta adresiyle kayıtlı üye bulunamadı.",
 
-	"token" => "This password reset token is invalid.",
+	"token" => "Şifre sıfırlama kodu geçersiz.",
 
-	"sent" => "Password reminder sent!",
+	"sent" => "Şifre sıfırlama başarı ile gönderildi!",
 
 );
