@@ -77,6 +77,10 @@ class Modernizr extends Command {
 			{
 				$this->call('bootstrap:publish');
 			}
+			else
+			{
+				File::makeDirectory('public/assets/js', 0755, true);
+			}
 
 			File::put($file, $content);
 

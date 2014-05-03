@@ -38,9 +38,9 @@ class Bootstrap extends Command {
 	 */
 	public function fire()
 	{
-		if ( File::isDirectory(dirname('public/assets')) )
+		if ( File::isDirectory('public/assets') )
 		{
-			File::deleteDirectory(dirname('public/assets'));
+			File::deleteDirectory('public/assets');
 		}
 		
 		$base_vendor_directory = 'vendor/twbs/bootstrap/dist/';
