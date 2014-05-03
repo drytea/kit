@@ -47,38 +47,12 @@ class Bootstrap extends Command {
 			$message = 'Twitter Bootstrap installed and published.';
 		}
 
-		$base_vendor_directory = 'vendor/twbs/bootstrap/dist/';
-		$base_package_directory = '../assets/';
-
-		$vendor_directories = array(
-			'css' => $base_vendor_directory.'css',
-			'fonts' => $base_vendor_directory.'fonts',
-			'js' => $base_vendor_directory.'js',
+		$arguments = array(
+			'package' => 'vendor/twbs/bootstrap/dist',
+			'--path'  => '../assets',
 		);
 
-		$package_directories = array(
-			'css' => $base_package_directory.'css',
-			'fonts' => $base_package_directory.'fonts',
-			'js' => $base_package_directory.'js',
-		);
-
-		$this->callSilent('asset:publish', array(
-					'package' => $package_directories['css'],
-					'--path'  => $vendor_directories['css']
-				)
-		);
-
-		$this->callSilent('asset:publish', array(
-					'package' => $package_directories['fonts'],
-					'--path'  => $vendor_directories['fonts']
-				)
-		);
-
-		$this->callSilent('asset:publish', array(
-					'package' => $package_directories['js'],
-					'--path'  => $vendor_directories['js']
-				)
-		);
+		$this->callSilent('asset:publish', $arguments);
 
 		$this->info($message);
 	}
