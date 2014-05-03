@@ -12,3 +12,4 @@ A sample application for beginning development with Laravel 4.
   - Coveralls integration
   - Authentication system (Register, Login, Logout) [Sentry 2]
   - Refactor language files
+  - Add Composer "create-project" command
