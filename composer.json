@@ -1,12 +1,12 @@
 {
-    "name": "msntx/kit",
+    "name": "ogunkarakus/kit",
     "description": "A sample application for beginning development with Laravel 4.",
     "keywords": ["beginner", "framework", "kit", "laravel", "laravel 4", "starter"],
     "license": "MIT",
     "authors": [
         {
             "name": "Ogün Karakuş",
-            "email": "msntx@mail.com",
+            "email": "ogunkarakus@superposta.com",
             "role": "Project Maintainer"
         }
     ],
