@@ -13,7 +13,7 @@ class Modernizr extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'modernizr:publish';
+	protected $name = 'kit:modernizr';
 
 	/**
 	 * The console command description.

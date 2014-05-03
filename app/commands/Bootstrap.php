@@ -12,7 +12,7 @@ class Bootstrap extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'bootstrap:publish';
+	protected $name = 'kit:bootstrap';
 
 	/**
 	 * The console command description.
