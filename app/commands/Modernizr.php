@@ -62,7 +62,7 @@ class Modernizr extends Command {
 
 			if ( md5($content) != md5($response) )
 			{
-				File::put($file, $content);
+				File::put($file, $response);
 				
 				$this->info('Modernizr updated and published.');
 			}
@@ -82,7 +82,7 @@ class Modernizr extends Command {
 				File::makeDirectory('public/assets/js', 0755, true);
 			}
 
-			File::put($file, $content);
+			File::put($file, $response);
 
 			$this->info('Modernizr installed and published.');
 		}
