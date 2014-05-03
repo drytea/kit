@@ -43,9 +43,9 @@ class Bootstrap extends Command {
 			File::deleteDirectory(dirname('public/assets'));
 		}
 		
-		$this->call('asset:publish', array('argument' => '../assets/css', '--path' => 'vendor/twbs/bootstrap/dist/css'));
-		$this->call('asset:publish', array('argument' => '../assets/fonts', '--path' => 'vendor/twbs/bootstrap/dist/fonts'));
-		$this->call('asset:publish', array('argument' => '../assets/js', '--path' => 'vendor/twbs/bootstrap/dist/js'));
+		$this->call('asset:publish', array('package' => '../assets/css', '--path' => 'vendor/twbs/bootstrap/dist/css'));
+		$this->call('asset:publish', array('package' => '../assets/fonts', '--path' => 'vendor/twbs/bootstrap/dist/fonts'));
+		$this->call('asset:publish', array('package' => '../assets/js', '--path' => 'vendor/twbs/bootstrap/dist/js'));
 	}
 
 	/**
