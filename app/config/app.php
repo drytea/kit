@@ -121,8 +121,6 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		# Included packages service providers
 		'Cartalyst\Sentry\SentryServiceProvider',
-		'Zizaco\Confide\ConfideServiceProvider',
-		'Zizaco\Entrust\EntrustServiceProvider',
 
 	),
 
@@ -191,8 +189,6 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 		# Included packages aliases
 		'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
-		'Confide'         => 'Zizaco\Confide\ConfideFacade',
-		'Entrust'         => 'Zizaco\Entrust\EntrustFacade',
 
 	),
 
