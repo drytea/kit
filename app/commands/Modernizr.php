@@ -54,7 +54,7 @@ class Modernizr extends Command {
 
 		$response = $request[0]->getContent();
 
-		$file = 'public/assets/modernizr.min.js';
+		$file = 'public/assets/js/modernizr.min.js';
 
 		if ( File::exists($file) )
 		{
@@ -73,11 +73,7 @@ class Modernizr extends Command {
 		}
 		else
 		{
-			if ( ! File::isDirectory('public/assets') )
-			{
-				$this->call('bootstrap:publish');
-			}
-			else
+			if ( ! File::isDirectory('public/assets/js') )
 			{
 				File::makeDirectory('public/assets/js', 0755, true);
 			}
